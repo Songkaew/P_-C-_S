@@ -1,0 +1,163 @@
+
+
+--getgenv().key = "b404c5c6087c"
+local ClientId = game:GetService("RbxAnalyticsService"):GetClientId() local whitelist = string.split((ClientId), '-') local Hxven = whitelist[5]
+
+
+
+
+local whitelist = {
+	["b404c5c6087c"] = "9bd7aa38-b0b9-4c20-afa4-b404c5c6087c",--ErrorCode:34
+}
+
+
+
+getgenv().ChackebHook = false
+getgenv().ChackebHookErrorCode_34 = false
+getgenv().ChackebHookErrorCode_45 = false
+--ErrorCode:45 ลูกค้าใส่คีย์ผิด
+--ErrorCode:34 แอดมินใส่ Hwid ผิดให้ลูกค้า
+if getgenv().key == Hxven then--ErrorCode:45
+	if whitelist[getgenv().key] == game:GetService("RbxAnalyticsService"):GetClientId() then--ErrorCode:34
+		print("whitelist[1]")
+		getgenv().ChackebHook = true
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/K"))()
+    else
+		getgenv().ChackebHookErrorCode_34 = true
+		print("whitelist|ErrorCode:34\nError:ClientId")
+		setclipboard('getgenv().key = "'..(Hxven)..'"\n loadstring(game:HttpGet("https://raw.githubusercontent.com/NaJaxHub/M/main/KL-NTR-Hub.lua"))() \n whitelist : '..(ClientId))
+		--setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+		print("whitelist|ErrorCode:34\nwhitelist|ทักหาแอดมิน")
+    end
+else
+	getgenv().ChackebHookErrorCode_45 = true
+	print("whitelist|ErrorCode:45\nError:ClientId")
+	setclipboard('getgenv().key = "'..(Hxven)..'"\n loadstring(game:HttpGet("https://raw.githubusercontent.com/NaJaxHub/M/main/KL-NTR-Hub.lua"))() \n whitelist : '..(ClientId))
+	--setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
+	print("whitelist|ErrorCode:45\nwhitelist|ทักหาแอดมิน")
+end wait(1)
+
+if getgenv().ChackebHook == true then
+	local url = "https://discord.com/api/webhooks/1238461626059853874/HkzBD2hB8TGQX6yegLM32MCfMf5s4rVlHv9YUfEnx3nlWapGz25aSg5PUnZvxsGW7M04" -- ur webhook url
+	local data = { 
+		["username"] = 'MrMaxNaJa', -- Webhook name here
+		["avatar_url"] = "https://cdn.discordapp.com/attachments/948603231192363058/1088077196997955704/Untitled-1_copy.png?ex=663ebc1b&is=663d6a9b&hm=31495ba22b1bd1219096d6c3283bcaa7c91ca1e58fa7201b97def38e2d40e5b4&", -- ur discord logo url
+		["embeds"] = {
+			{
+				["color"] = tonumber(0x00ff00), -- color id
+				["type"] = "rich",
+				["fields"] =  {
+					{
+						["name"] = "\n",
+						["value"] = '**whitelist Chack ✅**\n\n**ชื่อในเกม : '..game.Players.LocalPlayer.Name..'**',
+					},
+					{
+						["name"] = '**คีย์ผู้ใช้งาน**',
+						["value"] = '```lua\n["'..getgenv().key..'"]\n```\n',
+					},
+					{
+						["name"] = '**Hwidผู้ใช้งาน**',
+						["value"] = '```lua\n["'..ClientId..'"]\n```\n',
+					},
+					{
+						["name"] = '**รวมทุกอย่างสำหรับเช็ค ความถูกต้อง และใส่ Key ให้ลูกค้า**',
+						["value"] = '```lua\n["'..getgenv().key..'"] = ["'..ClientId..'"]\n```\n',
+					}
+				},
+				["footer"] = {
+					["text"] = "YouTube:MrMaxNaJa"
+				},
+				["timestamp"] = DateTime.now():ToIsoDate(),
+			}
+		},
+	} 
+
+	local newdata = game:GetService("HttpService"):JSONEncode(data)
+	local headers = {["content-type"] = "application/json"}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	request(abcdef)
+end
+
+if getgenv().ChackebHookErrorCode_45 == true then
+	local url = "https://discord.com/api/webhooks/1238468000936628245/pZUo-ttUHXMUGUrE-EKaayQxA4-zA2jXubDdTR0U3BQEQYCAz-di333L77zemye8yB3a"
+	local data = { 
+		["username"] = 'MrMaxNaJa', -- Webhook name here
+		["avatar_url"] = "https://cdn.discordapp.com/attachments/948603231192363058/1088077196997955704/Untitled-1_copy.png?ex=663ebc1b&is=663d6a9b&hm=31495ba22b1bd1219096d6c3283bcaa7c91ca1e58fa7201b97def38e2d40e5b4&", -- ur discord logo url
+		["embeds"] = {
+			{
+				["color"] = tonumber(0x00ff00), -- color id
+				["type"] = "rich",
+				["fields"] =  {
+					{
+						["name"] = "\n",
+						["value"] = '**whitelist Chack ErrorCode 45 | ลูกค้าใส่คีย์ผิด**\n\n**ชื่อในเกม : '..game.Players.LocalPlayer.Name..'**',
+					},
+					{
+						["name"] = '**คีย์ผู้ใช้งาน**',
+						["value"] = '```lua\n["'..getgenv().key..'"]\n```\n',
+					},
+					{
+						["name"] = '**Hwidผู้ใช้งาน**',
+						["value"] = '```lua\n["'..ClientId..'"]\n```\n',
+					},
+					{
+						["name"] = '**รวมทุกอย่างสำหรับเช็ค ความถูกต้อง และใส่ Key ให้ลูกค้า**',
+						["value"] = '```lua\n["'..getgenv().key..'"] = ["'..ClientId..'"]\n```\n',
+					}
+				},
+				["footer"] = {
+					["text"] = "YouTube:MrMaxNaJa"
+				},
+				["timestamp"] = DateTime.now():ToIsoDate(),
+			}
+		},
+	} 
+
+	local newdata = game:GetService("HttpService"):JSONEncode(data)
+	local headers = {["content-type"] = "application/json"}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	request(abcdef)
+end
+if getgenv().ChackebHookErrorCode_34 == true then
+	local url = "https://discord.com/api/webhooks/1238468000936628245/pZUo-ttUHXMUGUrE-EKaayQxA4-zA2jXubDdTR0U3BQEQYCAz-di333L77zemye8yB3a"
+	local data = { 
+		["username"] = 'MrMaxNaJa', -- Webhook name here
+		["avatar_url"] = "https://cdn.discordapp.com/attachments/948603231192363058/1088077196997955704/Untitled-1_copy.png?ex=663ebc1b&is=663d6a9b&hm=31495ba22b1bd1219096d6c3283bcaa7c91ca1e58fa7201b97def38e2d40e5b4&", -- ur discord logo url
+		["embeds"] = {
+			{
+				["color"] = tonumber(0x00ff00), -- color id
+				["type"] = "rich",
+				["fields"] =  {
+					{
+						["name"] = "\n",
+						["value"] = '**whitelist Chack ErrorCode 34 | แอดมินใส่ Hwid ผิดให้ลูกค้า หรือ HWID เปลี่ยน**\n\n**ชื่อในเกม : '..game.Players.LocalPlayer.Name..'**',
+					},
+					{
+						["name"] = '**คีย์ผู้ใช้งาน**',
+						["value"] = '```lua\n["'..getgenv().key..'"]\n```\n',
+					},
+					{
+						["name"] = '**Hwidผู้ใช้งาน**',
+						["value"] = '```lua\n["'..ClientId..'"]\n```\n',
+					},
+					{
+						["name"] = '**รวมทุกอย่างสำหรับเช็ค ความถูกต้อง และใส่ Key ให้ลูกค้า**',
+						["value"] = '```lua\n["'..getgenv().key..'"] = ["'..ClientId..'"]\n```\n',
+					}
+				},
+				["footer"] = {
+					["text"] = "YouTube:MrMaxNaJa"
+				},
+				["timestamp"] = DateTime.now():ToIsoDate(),
+			}
+		},
+	} 
+
+	local newdata = game:GetService("HttpService"):JSONEncode(data)
+	local headers = {["content-type"] = "application/json"}
+	request = http_request or request or HttpPost or syn.request
+	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+	request(abcdef)
+end
