@@ -7,7 +7,13 @@ local ClientId = game:GetService("RbxAnalyticsService"):GetClientId() local whit
 
 local whitelist = {
 	["b404c5c6087c"] = "9bd7aa38-b0b9-4c20-afa4-b404c5c6087c",--ErrorCode:34
+	["B1786EEC0CF8"] = "3C716E0A-F381-42CB-A634-B1786EEC0CF8"
+
 }
+
+
+
+
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/_viwxpc_/main/README.md"))() --obf script บนคอม
 
 getgenv().ChackebHook = false
