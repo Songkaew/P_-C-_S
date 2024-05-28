@@ -7,7 +7,9 @@ local ClientId = game:GetService("RbxAnalyticsService"):GetClientId() local whit
 
 local whitelist = {
 	["b404c5c6087c"] = "9bd7aa38-b0b9-4c20-afa4-b404c5c6087c",--ErrorCode:34
-	["B1786EEC0CF8"] = "3C716E0A-F381-42CB-A634-B1786EEC0CF8"
+	["B1786EEC0CF8"] = "3C716E0A-F381-42CB-A634-B1786EEC0CF8",
+	["CA19FDB73456"] = "D44114B7-91C4-49BF-86A4-CA19FDB73456"
+
 
 }
 
