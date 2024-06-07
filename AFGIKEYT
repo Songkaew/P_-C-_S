@@ -1,22 +1,18 @@
 
 
 --getgenv().key = "b404c5c6087c"
-local ClientId = game:GetService("RbxAnalyticsService"):GetClientId() local whitelist = string.split((ClientId), '-') local Hxven = whitelist[5]
+local ClientId = game:GetService("RbxAnalyticsService"):GetClientId() 
+local whitelist = string.split((ClientId), '-') local Hxven = whitelist[5]
 
 
 
 local whitelist = {
 	["b404c5c6087c"] = "9bd7aa38-b0b9-4c20-afa4-b404c5c6087c",--ErrorCode:34
 	["B1786EEC0CF8"] = "3C716E0A-F381-42CB-A634-B1786EEC0CF8",
-	["CA19FDB73456"] = "D44114B7-91C4-49BF-86A4-CA19FDB73456",
-	["B1786EEC0CF8"] = "3C716E0A-F381-42CB-A634-B1786EEC0CF8"
-
-
+	["CA19FDB73456"] = "D44114B7-91C4-49BF-86A4-CA19FDB73456"    
 
 
 }
-
-
 
 
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/_viwxpc_/main/README.md"))() --obf script บนคอม
@@ -30,8 +26,13 @@ if getgenv().key == Hxven then--ErrorCode:45
 	if whitelist[getgenv().key] == game:GetService("RbxAnalyticsService"):GetClientId() then--ErrorCode:34
 		print("whitelist[1]")
 		getgenv().ChackebHook = true
+        if game.PlaceId == 4520749081 then --KL
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg"))() --ยกซอด
-    else
+        elseif game.PlaceId == 2788229376 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/S_c_D-a--hod"))()
+        else
+            game:GetService("Players").LocalPlayer:Kick("Not Support")
+        end
 		getgenv().ChackebHookErrorCode_34 = true
 		print("whitelist|ErrorCode:34\nError:ClientId")
 		setclipboard('getgenv().key = "'..(Hxven)..'"\n loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/_viwxpc_/main/README.md"))() \n whitelist : '..(ClientId))
