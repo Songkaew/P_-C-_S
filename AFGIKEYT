@@ -1,169 +1,63 @@
-
-
---getgenv().key = "b404c5c6087c"
-local ClientId = game:GetService("RbxAnalyticsService"):GetClientId() 
-local whitelist = string.split((ClientId), '-') local Hxven = whitelist[5]
-
-
+local UserPy = game.Players.LocalPlayer.Name
+local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
+local whitelist = string.split((ClientId), '-')
+local Hxven = whitelist[5]
 
 local whitelist = {
-	["b404c5c6087c"] = "9bd7aa38-b0b9-4c20-afa4-b404c5c6087c",--ErrorCode:34
-	["B1786EEC0CF8"] = "3C716E0A-F381-42CB-A634-B1786EEC0CF8",
-	["CA19FDB73456"] = "D44114B7-91C4-49BF-86A4-CA19FDB73456"    
+    ["B1786EEC0CF8"] = "3C716E0A-F381-42CB-A634-B1786EEC0CF8"
 
 
+--[[
+_G.register_key = "bdd62fa5ac1b"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/Test/main/README.md"))()
+--]]
+
+	
+	["Admin"] = "Admin" --Dis :  -- Game :  --THB 
 }
 
 
---loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/_viwxpc_/main/README.md"))() --obf script บนคอม
-
-getgenv().ChackebHook = false
-getgenv().ChackebHookErrorCode_34 = false
-getgenv().ChackebHookErrorCode_45 = false
---ErrorCode:45 ลูกค้าใส่คีย์ผิด
---ErrorCode:34 แอดมินใส่ Hwid ผิดให้ลูกค้าhttps://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg
-if getgenv().key == Hxven then--ErrorCode:45
-	if whitelist[getgenv().key] == game:GetService("RbxAnalyticsService"):GetClientId() then--ErrorCode:34
-		print("whitelist[1]")
-		getgenv().ChackebHook = true
-        if game.PlaceId == 5602055394 then
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/S_c_D-a--hod"))()
-        end
-		getgenv().ChackebHookErrorCode_34 = true
-		print("whitelist|ErrorCode:34\nError:ClientId")
-		setclipboard('getgenv().key = "'..(Hxven)..'"\n loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/_viwxpc_/main/README.md"))() \n whitelist : '..(ClientId))
-		--setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
-		print("whitelist|ErrorCode:34\nwhitelist|ทักหาแอดมิน")
+if _G.register_key == Hxven then
+	if whitelist[_G.register_key] == game:GetService("RbxAnalyticsService"):GetClientId() then
+		print("whitelist![1] ")
+		_G.MrMaxNaJaBuy = true
+		if game.PlaceId == 4520749081 then--kl
+			loadstring(game:HttpGet("https://github.com/Songkaew/LoveYou/blob/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg"))()
+		elseif game.PlaceId == 6381829480 then--kl
+			loadstring(game:HttpGet("https://github.com/Songkaew/LoveYou/blob/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg"))()
+		elseif game.PlaceId == 15759515082 then--kl
+			loadstring(game:HttpGet("https://github.com/Songkaew/LoveYou/blob/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg"))()
+		elseif game.PlaceId == 5602055394 then--mp
+			loadstring(game:HttpGet("https://github.com/Songkaew/LoveYou/blob/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/S_c_D-a--hod"))()
+		elseif game.PlaceId == 2753915549 then--BF
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/main/Narongrit_Songkaew.lua"))()
+		elseif game.PlaceId == 4442272183 then -- BF
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/main/Narongrit_Songkaew.lua"))()
+		elseif game.PlaceId == 7449423635 then -- BF
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/main/Narongrit_Songkaew.lua"))()
+		--elseif game.PlaceId == 6897167394 then --DeMonPice
+			--loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Kl_Mr/Max/Na/Ke_y__DEmonP.lua"))()
+		elseif game.PlaceId == 3351674303 then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Wxzzz1/1Z/main/README.md"))()
+		else
+			game:GetService("Players").LocalPlayer:Kick("Not Support")
+		end
+		print("whitelist![1] OK")
+    else
+        setclipboard("https://discord.gg/6e8vnRFrFH")
+        wait(0.5)
+		if _G.key == "I Love MrMaxNaJa Hack Kl" then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/main/Kl_Mr/Max/Na/Ja/Hee.lua"))()
+		else
+        	game.Players.LocalPlayer:kick("Error 49H\nติดต่อแอดมิน\nสำหรับคนที่ซื้อแล้วขึ้นหน้านี้")
+		end
     end
 else
-	getgenv().ChackebHookErrorCode_45 = true
-	print("whitelist|ErrorCode:45\nError:ClientId")
-	setclipboard('getgenv().key = "'..(Hxven)..'"\n loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/_viwxpc_/main/README.md"))() \n whitelist : '..(ClientId))
-	--setclipboard(game:GetService("RbxAnalyticsService"):GetClientId())
-	print("whitelist|ErrorCode:45\nwhitelist|ทักหาแอดมิน")
-end wait(1)
-
-if getgenv().ChackebHook == true then
-	local url = "https://discord.com/api/webhooks/1238461626059853874/HkzBD2hB8TGQX6yegLM32MCfMf5s4rVlHv9YUfEnx3nlWapGz25aSg5PUnZvxsGW7M04" -- ur webhook url
-	local data = { 
-		["username"] = 'MrMaxNaJa', -- Webhook name here
-		["avatar_url"] = "https://cdn.discordapp.com/attachments/948603231192363058/1088077196997955704/Untitled-1_copy.png?ex=663ebc1b&is=663d6a9b&hm=31495ba22b1bd1219096d6c3283bcaa7c91ca1e58fa7201b97def38e2d40e5b4&", -- ur discord logo url
-		["embeds"] = {
-			{
-				["color"] = tonumber(0x00ff00), -- color id
-				["type"] = "rich",
-				["fields"] =  {
-					{
-						["name"] = "\n",
-						["value"] = '**whitelist Chack ✅**\n\n**ชื่อในเกม : '..game.Players.LocalPlayer.Name..'**',
-					},
-					{
-						["name"] = '**คีย์ผู้ใช้งาน**',
-						["value"] = '```lua\n["'..getgenv().key..'"]\n```\n',
-					},
-					{
-						["name"] = '**Hwidผู้ใช้งาน**',
-						["value"] = '```lua\n["'..ClientId..'"]\n```\n',
-					},
-					{
-						["name"] = '**รวมทุกอย่างสำหรับเช็ค ความถูกต้อง และใส่ Key ให้ลูกค้า**',
-						["value"] = '```lua\n["'..getgenv().key..'"] = ["'..ClientId..'"]\n```\n',
-					}
-				},
-				["footer"] = {
-					["text"] = "YouTube:MrMaxNaJa"
-				},
-				["timestamp"] = DateTime.now():ToIsoDate(),
-			}
-		},
-	} 
-
-	local newdata = game:GetService("HttpService"):JSONEncode(data)
-	local headers = {["content-type"] = "application/json"}
-	request = http_request or request or HttpPost or syn.request
-	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-	request(abcdef)
-end
-
-if getgenv().ChackebHookErrorCode_45 == true then
-	local url = "https://discord.com/api/webhooks/1238468000936628245/pZUo-ttUHXMUGUrE-EKaayQxA4-zA2jXubDdTR0U3BQEQYCAz-di333L77zemye8yB3a"
-	local data = { 
-		["username"] = 'MrMaxNaJa', -- Webhook name here
-		["avatar_url"] = "https://cdn.discordapp.com/attachments/948603231192363058/1088077196997955704/Untitled-1_copy.png?ex=663ebc1b&is=663d6a9b&hm=31495ba22b1bd1219096d6c3283bcaa7c91ca1e58fa7201b97def38e2d40e5b4&", -- ur discord logo url
-		["embeds"] = {
-			{
-				["color"] = tonumber(0x00ff00), -- color id
-				["type"] = "rich",
-				["fields"] =  {
-					{
-						["name"] = "\n",
-						["value"] = '**whitelist Chack ErrorCode 45 | ลูกค้าใส่คีย์ผิด**\n\n**ชื่อในเกม : '..game.Players.LocalPlayer.Name..'**',
-					},
-					{
-						["name"] = '**คีย์ผู้ใช้งาน**',
-						["value"] = '```lua\n["'..getgenv().key..'"]\n```\n',
-					},
-					{
-						["name"] = '**Hwidผู้ใช้งาน**',
-						["value"] = '```lua\n["'..ClientId..'"]\n```\n',
-					},
-					{
-						["name"] = '**รวมทุกอย่างสำหรับเช็ค ความถูกต้อง และใส่ Key ให้ลูกค้า**',
-						["value"] = '```lua\n["'..getgenv().key..'"] = ["'..ClientId..'"]\n```\n',
-					}
-				},
-				["footer"] = {
-					["text"] = "YouTube:MrMaxNaJa"
-				},
-				["timestamp"] = DateTime.now():ToIsoDate(),
-			}
-		},
-	} 
-
-	local newdata = game:GetService("HttpService"):JSONEncode(data)
-	local headers = {["content-type"] = "application/json"}
-	request = http_request or request or HttpPost or syn.request
-	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-	request(abcdef)
-end
-if getgenv().ChackebHookErrorCode_34 == true then
-	local url = "https://discord.com/api/webhooks/1238468000936628245/pZUo-ttUHXMUGUrE-EKaayQxA4-zA2jXubDdTR0U3BQEQYCAz-di333L77zemye8yB3a"
-	local data = { 
-		["username"] = 'MrMaxNaJa', -- Webhook name here
-		["avatar_url"] = "https://cdn.discordapp.com/attachments/948603231192363058/1088077196997955704/Untitled-1_copy.png?ex=663ebc1b&is=663d6a9b&hm=31495ba22b1bd1219096d6c3283bcaa7c91ca1e58fa7201b97def38e2d40e5b4&", -- ur discord logo url
-		["embeds"] = {
-			{
-				["color"] = tonumber(0x00ff00), -- color id
-				["type"] = "rich",
-				["fields"] =  {
-					{
-						["name"] = "\n",
-						["value"] = '**whitelist Chack ErrorCode 34 | แอดมินใส่ Hwid ผิดให้ลูกค้า หรือ HWID เปลี่ยน**\n\n**ชื่อในเกม : '..game.Players.LocalPlayer.Name..'**',
-					},
-					{
-						["name"] = '**คีย์ผู้ใช้งาน**',
-						["value"] = '```lua\n["'..getgenv().key..'"]\n```\n',
-					},
-					{
-						["name"] = '**Hwidผู้ใช้งาน**',
-						["value"] = '```lua\n["'..ClientId..'"]\n```\n',
-					},
-					{
-						["name"] = '**รวมทุกอย่างสำหรับเช็ค ความถูกต้อง และใส่ Key ให้ลูกค้า**',
-						["value"] = '```lua\n["'..getgenv().key..'"] = ["'..ClientId..'"]\n```\n',
-					}
-				},
-				["footer"] = {
-					["text"] = "YouTube:MrMaxNaJa"
-				},
-				["timestamp"] = DateTime.now():ToIsoDate(),
-			}
-		},
-	} 
-
-	local newdata = game:GetService("HttpService"):JSONEncode(data)
-	local headers = {["content-type"] = "application/json"}
-	request = http_request or request or HttpPost or syn.request
-	local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-	request(abcdef)
+	wait(0.5)
+	if _G.key == "I Love MrMaxNaJa Hack Kl" then
+		wait(0.5)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/main/Kl_Mr/Max/Na/Ja/Hee.lua"))()
+	else
+    	game.Players.LocalPlayer:kick("Error 59H\nติดต่อแอดมิน\nสำหรับคนที่ซื้อแล้วขึ้นหน้านี้")
+	end
 end
