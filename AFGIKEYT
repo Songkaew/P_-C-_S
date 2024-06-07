@@ -26,16 +26,8 @@ if getgenv().key == Hxven then--ErrorCode:45
 	if whitelist[getgenv().key] == game:GetService("RbxAnalyticsService"):GetClientId() then--ErrorCode:34
 		print("whitelist[1]")
 		getgenv().ChackebHook = true
-        if game.PlaceId == 4520749081 then --KL
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg"))() --ยกซอด
-        elseif game.PlaceId == 6381829480 then--kl
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg"))() --ยกซอด
-		elseif game.PlaceId == 15759515082 then--kl
-		    loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg"))() --ยกซอด
-        elseif game.PlaceId == 5602055394 then
+        if game.PlaceId == 5602055394 then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/S_c_D-a--hod"))()
-        else
-            game:GetService("Players").LocalPlayer:Kick("Not Support")
         end
 		getgenv().ChackebHookErrorCode_34 = true
 		print("whitelist|ErrorCode:34\nError:ClientId")
