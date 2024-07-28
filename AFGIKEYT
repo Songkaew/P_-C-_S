@@ -1,63 +1,751 @@
-local UserPy = game.Players.LocalPlayer.Name
-local ClientId = game:GetService("RbxAnalyticsService"):GetClientId()
-local whitelist = string.split((ClientId), '-')
-local Hxven = whitelist[5]
-
-local whitelist = {
-    ["B1786EEC0CF8"] = "3C716E0A-F381-42CB-A634-B1786EEC0CF8"
-
-
---[[
-_G.register_key = "bdd62fa5ac1b"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xOne2/Test/main/README.md"))()
---]]
-
-	
-	["Admin"] = "Admin" --Dis :  -- Game :  --THB 
+_G.ImageUIButton = "rbxassetid://17678966977"
+_G.UIB = "rbxassetid://17678966977"
+print("Settings Service")
+_G.Settings = {
+    Point = 1,
+	SelectPoint = 1,
+	SelectPoints = 1
 }
 
-
-if _G.register_key == Hxven then
-	if whitelist[_G.register_key] == game:GetService("RbxAnalyticsService"):GetClientId() then
-		print("whitelist![1] ")
-		_G.MrMaxNaJaBuy = true
-		if game.PlaceId == 4520749081 then--kl
-			loadstring(game:HttpGet("https://github.com/Songkaew/LoveYou/blob/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg"))()
-		elseif game.PlaceId == 6381829480 then--kl
-			loadstring(game:HttpGet("https://github.com/Songkaew/LoveYou/blob/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg"))()
-		elseif game.PlaceId == 15759515082 then--kl
-			loadstring(game:HttpGet("https://github.com/Songkaew/LoveYou/blob/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/Sc_pc_ggg"))()
-		elseif game.PlaceId == 5602055394 then--mp
-			loadstring(game:HttpGet("https://github.com/Songkaew/LoveYou/blob/LoveH/Mr/Mr/Mr/M/a/x/N/a/J/a/S_c_D-a--hod"))()
-		elseif game.PlaceId == 2753915549 then--BF
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/main/Narongrit_Songkaew.lua"))()
-		elseif game.PlaceId == 4442272183 then -- BF
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/main/Narongrit_Songkaew.lua"))()
-		elseif game.PlaceId == 7449423635 then -- BF
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/main/Narongrit_Songkaew.lua"))()
-		--elseif game.PlaceId == 6897167394 then --DeMonPice
-			--loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/LoveH/Kl_Mr/Max/Na/Ke_y__DEmonP.lua"))()
-		elseif game.PlaceId == 3351674303 then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Wxzzz1/1Z/main/README.md"))()
-		else
-			game:GetService("Players").LocalPlayer:Kick("Not Support")
-		end
-		print("whitelist![1] OK")
-    else
-        setclipboard("https://discord.gg/6e8vnRFrFH")
-        wait(0.5)
-		if _G.key == "I Love MrMaxNaJa Hack Kl" then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/main/Kl_Mr/Max/Na/Ja/Hee.lua"))()
-		else
-        	game.Players.LocalPlayer:kick("Error 49H\nติดต่อแอดมิน\nสำหรับคนที่ซื้อแล้วขึ้นหน้านี้")
-		end
+function Tween(Pos)--game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    local Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+    if game.Players.LocalPlayer.Character.Humanoid.Sit then
+        game.Players.LocalPlayer.Character.Humanoid.Sit = false
     end
-else
-	wait(0.5)
-	if _G.key == "I Love MrMaxNaJa Hack Kl" then
-		wait(0.5)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Songkaew/LoveYou/main/Kl_Mr/Max/Na/Ja/Hee.lua"))()
-	else
-    	game.Players.LocalPlayer:kick("Error 59H\nติดต่อแอดมิน\nสำหรับคนที่ซื้อแล้วขึ้นหน้านี้")
-	end
+    pcall(function()
+        local tween = game:GetService("TweenService"):Create(
+            game.Players.LocalPlayer.Character.HumanoidRootPart,
+            TweenInfo.new(Distance/99999999999999999999999999, Enum.EasingStyle.Linear),
+            {CFrame = Pos}
+        )
+        tween:Play()
+    end)
 end
+spawn(function()
+	game:GetService("RunService").Stepped:Connect(function()
+		if _G.AutoFarm or _G.AutoFarmOrbPurple or _G.AutoYoru  or _G.AutoMegumin then
+			if not game:GetService("Workspace"):FindFirstChild("Part") then
+				local Part = Instance.new("Part")
+				Part.Name = "Part"
+				Part.Parent = game.Workspace
+				Part.Anchored = true
+				Part.Transparency = 1
+				Part.Size = Vector3.new(_G.Settings.DistanceMob,_G.Settings.DistanceMob,_G.Settings.DistanceMob)--0.5
+			elseif game:GetService("Workspace"):FindFirstChild("Part") then--                                                                                                        - 3.8                        
+				game.Workspace["Part"].CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y -3.8 ,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
+			end
+		end
+	end)
+end)
+spawn(function()
+	while wait() do
+		if _G.AutoFarm or _G.AutoFarmOrbPurple or _G.AutoYoru or _G.AutoMegumin then
+			pcall(function()
+				if not game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
+					local Noclip = Instance.new("BodyVelocity")
+					Noclip.Name = "BodyClip"
+					Noclip.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+					Noclip.MaxForce = Vector3.new(100000, 100000, 100000)
+					Noclip.Velocity = Vector3.new(0, 0, 0)
+				end
+			end)
+		else
+			if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
+				game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip"):Destroy()
+			end
+		end
+	end
+end)
+
+_G.TeamBlack =  true --false / true
+_G.TeamWhite = false --false / true
+_G.TeamGreen = false --false / true
+_G.TeamBlack =  false --false / true
+_G.TeamRed =  false --false / true
+local Update = loadstring(game:HttpGet("https://pastebin.com/raw/LZBa7hU1"))() --https://raw.githubusercontent.com/NaJaxHub/ser/main/UIfreeNaJabat"))()
+
+local Library = Update:Window("Script By.XezShop#Wx","",Enum.KeyCode.RightControl);--"MrMaxNaJa Hub | Map Blox Fruits - Free Script Version 0.1.15.1 By MrMaxNaJa"
+Main = Library:Tab("Main")
+Farm = Library:Tab("Farm")
+Shop = Library:Tab("Shop")
+
+Main:Line()
+
+Main:Label("Welcome MrMaxNaJa Community")
+
+local Time = Main:Label("Executor Time");spawn(function() getgenv().Time = true;while true do wait(.1) UpdateTime() end end);function UpdateTime() local date = os.date("*t");local hour = (date.hour) % 24;local ampm = hour < 12 and "AM" or "PM";local timezone = string.format("%02i:%02i:%02i %s", ((hour -1) % 12) + 1, date.min, date.sec, ampm);local datetime = string.format("%02d/%02d/%04d", date.day, date.month, date.year);local LocalizationService = game:GetService("LocalizationService");local Players = game:GetService("Players");local player = Players.LocalPlayer;local name = player.Name;local result, code = pcall(function()   return LocalizationService:GetCountryRegionForPlayerAsync(player)  end);Time:Set(" : " .. timezone);Time:Set("Executor Time: " .. datetime .. " [ " .. code .. " ]");spawn(function() if getgenv().Time then pcall(function()  while wait() do  Time()  end end) end end) end
+
+Main:Seperator("Main")
+
+MonCheckFarmLv = {
+    "Bacon",
+    "Bacon Blue",
+    "Bacon Red",
+    "Buggy",
+    "Cat",
+    "Clown",
+    "Muay Bacon",
+    "Moai",
+    "Monkey",
+    "Sand Man",
+    "Stick Man",
+    "Tani Man",
+    "Koma Man",
+    "Bandit",
+    "Gorilla",
+    "Gorilla Power",
+    "Pirate",
+    "Zombie Smile",
+    "ZombieXD",
+    "Bacon Marine",
+    "Deer Man",
+    "Marine Strong",
+    "Demon Man",
+    ---Yoru
+    "Monkey",
+    "Moai",
+    "Cat",
+    "Buggy",
+    "Dragon Man",
+    -----เมกุมิน
+    "Samurai",
+    "Kaoma Man",
+    ---------
+    "Thug",
+    "Gorilla Power",
+    "Pirate",
+    "Sade Man",
+
+}
+
+Main:Dropdown("Select Mon Farm","", MonCheckFarmLv,function(a)
+	_G.IslandFarm = a
+end)
+Main:Toggle("AutoFarm Lv.",_G.AutoFarm,function(value)
+    _G.AutoFarm = value
+end)
+spawn(function()
+    while wait() do
+        if _G.AutoFarm then
+            pcall(function()
+                --CheckLevel()
+                    for i,v in pairs(game:GetService("Workspace").Mob:GetChildren()) do
+                        if string.find(_G.IslandFarm, v.Name)  then
+                                repeat wait()
+                                    Tween(v.HumanoidRootPart.CFrame  * CFrame.new(-1,5,3))
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid.WalkSpeed = 0
+                                    v.Head.CanCollide = false
+                                    v.HumanoidRootPart.Size = Vector3.new(30,30,30)
+                                    Click()
+                                    EquipWeapon(_G.Weapon2)
+                                until not _G.AutoFarm or  v.Parent or not v.Humanoid.Health <= 0 
+                        end
+                    end
+            end)
+        end
+    end
+end)
+function Click()
+    game:GetService("VirtualUser"):CaptureController()
+    game:GetService("VirtualUser"):Button1Down(Vector2.new(1280,672))
+end
+Main:Toggle("AutoDiamond",_G.AutoDiamond,function (value)
+    _G.AutoDiamond = value
+end)
+
+spawn(function ()
+    while wait() do
+        pcall(function ()
+            if _G.AutoDiamond then
+                Tween(CFrame.new(287.957733, 43.4693527, -811.996399, 0.710258722, -5.34980309e-08, -0.703940749, 1.24196022e-08, 1, -6.34668496e-08, 0.703940749, 3.63352193e-08, 0.710258722))
+                game:GetService("VirtualInputManager"):SendKeyEvent(true,"E",false,game) wait() 
+                game:GetService("VirtualInputManager"):SendKeyEvent(false,"E",false,game) wait(.1)
+                Tween(CFrame.new(343.097748, 45.226078, -770.127136, 0.335155964, -6.5402979e-08, 0.942162693, 5.25415338e-08, 1, 5.07273015e-08, -0.942162693, 3.25011129e-08, 0.335155964))
+                game:GetService("VirtualInputManager"):SendKeyEvent(true,"E",false,game) wait() 
+                game:GetService("VirtualInputManager"):SendKeyEvent(false,"E",false,game) wait(.1)
+                wait(17)
+                Tween(CFrame.new(349.743286, 43.4693527, -805.355286, 0.887345314, -3.22245306e-08, -0.461105496, 9.13560516e-09, 1, -5.23049337e-08, 0.461105496, 4.22000603e-08, 0.887345314))
+                game:GetService("VirtualInputManager"):SendKeyEvent(true,"E",false,game) wait() 
+                game:GetService("VirtualInputManager"):SendKeyEvent(false,"E",false,game) wait(.1)
+            
+            end
+        end)
+        
+    end
+end)
+Main:Line2()
+Main:Button2("Boost FPS ",function ()
+    local decalsyeeted = true
+    local g, w, l = game, game.Workspace, game.Lighting
+    local t = w.Terrain
+    sethiddenproperty(l, "Technology", 2)
+    sethiddenproperty(t, "Decoration", false)
+    t.WaterWaveSize, t.WaterWaveSpeed, t.WaterReflectance, t.WaterTransparency = 0, 0, 0, 0
+    l.GlobalShadows, l.FogEnd, l.Brightness = false, 9e9, 0
+    Misc().Rendering.QualityLevel = "Level01"
+
+    local function handleDescendant(v)
+    if v:IsA("Accessory") or v:IsA("Shirt") or v:IsA("Pants") or v:IsA("ShirtGraphic") then
+    v:Remove()
+    elseif v:IsA("BasePart") and not v:IsA("MeshPart") then
+    v.Material, v.Reflectance = "Plastic", 0
+    elseif (v:IsA("Decal") or v:IsA("Texture")) and decalsyeeted then
+    v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+    v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+    v.BlastPressure, v.BlastRadius = 1, 1
+    elseif (v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles")) then
+    v.Enabled = false
+    elseif v:IsA("MeshPart") and decalsyeeted then
+    v.Material, v.Reflectance, v.TextureID = "Plastic", 0, 10385902758728957
+    elseif v:IsA("SpecialMesh") and decalsyeeted then
+    v.TextureId = 0
+    end
+    end
+
+    for _, v in pairs(w:GetDescendants()) do
+    handleDescendant(v)
+    end
+
+    w.DescendantAdded:Connect(function(v)
+        wait()
+        handleDescendant(v)
+        end)
+
+    for _, e in ipairs(l:GetChildren()) do
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+    e.Enabled = false
+    end
+    end
+end)
+
+Main:Line2()
+Main:Toggle2("Skill Z",_G.Z,function (value)
+    _G.Z = value
+end)
+Main:Toggle2("Skill X",_G.X,function (value)
+    _G.X = value
+end)
+Main:Toggle2("Skill C",_G.C,function (value)
+    _G.C = value
+end)
+Main:Toggle2("Skill V",_G.V,function (value)
+    _G.V = value
+end)
+
+
+spawn(function()
+    pcall(function()
+        while wait() do
+        if _G.Z then
+local args = {
+    [1] = _G.Weapon,
+    [2] = "z"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Action"):FireServer(unpack(args))
+end
+end
+end)
+end)
+
+
+
+spawn(function()
+    pcall(function()
+        while wait() do
+        if _G.X then
+local args = {
+    [1] = _G.Weapon,
+    [2] = "x"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Action"):FireServer(unpack(args))
+end
+end
+end)
+end)
+
+
+
+spawn(function()
+    pcall(function()
+        while wait() do
+        if _G.C then
+local args = {
+    [1] = _G.Weapon,
+    [2] = "c"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Action"):FireServer(unpack(args))
+end
+end
+end)
+end)
+
+
+
+
+
+
+
+
+
+
+spawn(function()
+    pcall(function()
+        while wait() do
+        if _G.V then
+local args = {
+    [1] = _G.Weapon,
+    [2] = "v"
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Action"):FireServer(unpack(args))
+end
+end
+end)
+end)
+
+
+
+
+
+
+
+Main:Line2()
+
+Main:Toggle2("AutoGrabFruit",_G.AutoGrabFruit,function (value)
+    _G.AutoGrabFruit = value
+end)
+spawn(function()
+    while wait() do
+        if _G.AutoGrabFruit then
+            pcall(function()
+                for i,v in pairs(game.Workspace.Fruits:GetChildren()) do
+                    if v:IsA("Tool") then
+                        v.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+                    end
+                end    
+            end)
+        end
+    end
+end)
+Main:Toggle2("AutoStore\nFruit/Item/Orb",_G.AutoStoreFruit,function (value)
+    _G.AutoStoreFruit = value
+end)
+_G.Fruit = {
+    "Dark Fruit",
+    "Ice Fruit",
+    "Flame Fruit",
+    "Sand Fruit",
+    "Bomb Fruit",
+    "Light Fruit",
+    "Orb Atomic",
+    "Book Heaven",
+    "Straw Hat",
+    "Antler",
+    "Banana",
+    "Banana Stem",
+    "Book Heaven",
+    "Cat",
+    "Clown Mask",
+    "Orb Black",
+    "Orb Blue",
+    "Orb Dark",
+    "Orb Red",
+    "Orb Sand",
+    "Orb White",
+    "Rock",
+    "Rot Banana",
+    "Scarf",
+    "Shiny Banana",
+    "Skull Mask",
+    "Stick",
+    "Tissue",
+    "Orb Purple",
+    "Cyber Chip",
+    "Orb Shadow",
+    "Sheath",
+    "Finger Sukuna",
+    "Chair",
+    "Dragon Blade",
+    "Shadow Ring",
+    "Shadow Diary",
+    "Cloak Shadow",
+    "Orb Atomic",
+    "Straw Hat",
+    "Hat Megumin",
+    "Cyber Militech",
+    "Muaythai",
+    "WingChun",
+}
+
+spawn(function()
+    while true do   
+        wait(3)
+        if _G.AutoStoreFruit or _G.AutoOr then
+            pcall(function()
+                local player = game.Players.LocalPlayer
+                local backpack = player.Backpack
+                local humanoid = player.Character and player.Character:FindFirstChildOfClass("Humanoid")
+                
+                local dialogueGui = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Dialogue")
+                local isVisible = dialogueGui and dialogueGui:FindFirstChild("Frame")
+
+                if isVisible then
+                    return 
+                end
+
+                if not humanoid then
+                    return 
+                end
+
+                local currentTool = humanoid:FindFirstChildOfClass("Tool")
+                if currentTool and table.find(_G.Fruit, currentTool.Name) then
+                    return  
+                end
+
+                if currentTool and not table.find(_G.Fruit, currentTool.Name) then
+                    currentTool:Destroy()
+                end
+
+                for i, v in pairs(backpack:GetChildren()) do
+                    if table.find(_G.Fruit, v.Name) then
+                        humanoid:EquipTool(v)
+                        lastEquippedTool = v
+                        break
+                    end
+                end
+            end)
+        end
+    end
+end)
+
+spawn(function()
+    while wait() do
+        pcall(function()
+            if _G.AutoStoreFruit or _G.AutoOr or _G.AutoStoreOrbgg or _G.AutoBossspawnAizen then
+                for i2, v in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
+                    if string.find(v.Name, "Dialogue") then
+                   v.Frame["3"].Position = UDim2.new(0, -800 ,0, -700)
+                   v.Frame["3"].Size = UDim2.new(5000, 5000, 5000, 5000)
+                   v.Frame["3"].BackgroundTransparency = 1
+                   v.Frame["3"].ImageTransparency = 1
+                    end
+                end
+            end
+        end)
+    end
+end)
+
+
+spawn(function()
+    while wait() do
+      if _G.AutoStoreFruit or _G.AutoOr or _G.AutoStoreOrbgg or _G.AutoBossspawnAizen then
+                game:GetService'VirtualUser':CaptureController()
+                game:GetService'VirtualUser':ClickButton1(Vector2.new(851, 158), game:GetService("Workspace").Camera.CFrame)
+            end
+        end
+end)
+Main:Line2()
+
+Main:Button2("ReJoin",function ()
+    game:GetService("TeleportService"):Teleport(game.PlaceId)
+
+end)
+Main:Line2()
+Main:Toggle2("Auto Equip",AutoEquiped,function(a)
+    AutoEquiped = a
+end)
+
+spawn(function()
+    while wait() do
+        if AutoEquiped then
+            pcall(function()
+                wait(1)
+                game.Players.LocalPlayer.Character.Humanoid:EquipTool(game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(_G.Weapon))
+            end)
+        end
+    end
+end)
+local Weaponlist = {}
+local Weapon = nil
+
+for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    table.insert(Weaponlist,v.Name)
+end
+
+local SearchWeapon = Main:Dropdown2("Weapon 1","",Weaponlist,function(value)
+	_G.Weapon = value
+end)
+--[[
+local SearchWeapon1 = Main:Dropdown2("Weapon [Devil Fruits]","",Weaponlist,function(value)
+	_G.Weapon2 = value
+end)
+]]
+Main:Button2("Refresh Weapon",function()
+    SearchWeapon:Clear()
+    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
+        if v:IsA("Tool") then
+            SearchWeapon:Add(v.Name)
+        end
+    end
+    for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do  
+        if v:IsA("Tool") then
+            SearchWeapon:Add(v.Name)
+        end
+    end
+    SearchWeapon1:Clear()
+    for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do  
+        if v:IsA("Tool") then
+            SearchWeapon1:Add(v.Name)
+        end
+    end
+    for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do  
+        if v:IsA("Tool") then
+            SearchWeapon1:Add(v.Name)
+        end
+    end
+end)
+
+
+print("XEz")
+
+Main:Line()
+Main:Seperator("Up Stats")
+
+Main:Toggle("Auto Up Melee",_G.AutoMelee,function(value)
+    _G.AutoMelee = value
+end)
+spawn(function ()
+    while wait() do
+        pcall(function ()
+            if _G.AutoMelee then
+            local args = {
+                [1] = "UpStats",
+                [2] = "Melee",
+                [3] = 1000
+            }
+
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("System"):FireServer(unpack(args))
+        end
+        end)
+    end
+end)
+Main:Toggle("Auto Up Sword",_G.AutoSword,function(value)
+    _G.AutoSword = value
+end)
+spawn(function ()
+    while wait() do
+        pcall(function ()
+            if _G.AutoSword then
+                local args = {
+                    [1] = "UpStats",
+                    [2] = "Sword",
+                    [3] = 1000
+                }
+                
+                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("System"):FireServer(unpack(args))
+                
+            end
+        end)
+    end
+end)
+
+Main:Toggle("Auto Up DevilFruit",_G.DevilFruit,function(value)
+    _G.DevilFruit = value
+end)
+spawn(function ()
+    while wait() do
+        pcall(function ()
+            if _G.DevilFruit then
+            local args = {
+                [1] = "UpStats",
+                [2] = "DevilFruit",
+                [3] = 1000
+            }
+
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("System"):FireServer(unpack(args))
+        end
+        end)
+    end
+end)
+Main:Toggle("Auto Up Special",_G.Special,function(value)
+    _G.Special = value
+end)
+spawn(function ()
+    while wait() do
+        pcall(function ()
+            if _G.Special then
+                local args = {
+                    [1] = "UpStats",
+                    [2] = "Special",
+                    [3] = 1000
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("System"):FireServer(unpack(args))
+            end
+        end)
+    end
+end)
+Main:Toggle("Auto Up Defense",_G.Defense,function(value)
+    _G.Defense = value
+end)
+spawn(function ()
+    while wait() do
+        pcall(function ()
+            if _G.Defense then
+
+                    local args = {
+                        [1] = "UpStats",
+                        [2] = "Defense",
+                        [3] = 1000
+                    }
+                    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("System"):FireServer(unpack(args))
+                end
+        end)
+    end
+end)
+--------------------------------
+--Farm
+
+Farm:Toggle("AutoFarmOrbPurple",_G.AutoFarmOrbPurple,function(value)
+    _G.AutoFarmOrbPurple = value
+end)
+spawn(function()
+    while wait() do
+        if _G.AutoFarmOrbPurple then
+            pcall(function()
+                for i, v in pairs(game:GetService("Workspace").Mob:GetChildren()) do
+                    if v.Name == "Marine Strong" and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
+                        v.HumanoidRootPart.Size = Vector3.new(10, 10, 10)
+                        v.HumanoidRootPart.Transparency = 1
+                        v.Humanoid.WalkSpeed = 0
+                        v.Humanoid.JumpPower = 0
+                        repeat task.wait()
+                            Click()
+                            Tween(v.HumanoidRootPart.CFrame * CFrame.new(1,5,3))
+                        until _G.AutoFarmOrbPurple == false or v.Humanoid.Health <= 0
+                    end 
+                end 
+            end)
+        end
+    end
+end)
+
+
+
+
+
+Farm:Line()
+
+
+Farm:Toggle("Auto Yoru",_G.AutoFarm,function(value)
+    _G.AutoYoru = value
+end)
+spawn(function()
+    while wait() do
+        if _G.AutoYoru then
+            pcall(function()
+                --CheckLevel()
+                    for i,v in pairs(game:GetService("Workspace").Mob:GetChildren()) do
+                        if string.find(_G.Yoru, v.Name)  then
+                                repeat wait()
+                                    Tween(v.HumanoidRootPart.CFrame  * CFrame.new(-1,5,3))
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid.WalkSpeed = 0
+                                    v.Head.CanCollide = false
+                                    v.HumanoidRootPart.Size = Vector3.new(30,30,30)
+                                    Click()
+                                    EquipWeapon(_G.Weapon2)
+                                until not _G.AutoFarm or  v.Parent or not v.Humanoid.Health <= 0 
+                        end
+                    end
+            end)
+        end
+    end
+end)
+Yoru = {
+    ---Yoru
+    "Monkey",
+    "Moai",
+    "Cat",
+    "Buggy"
+}
+
+Farm:Dropdown("Select Mon Yoru","", Yoru,function(a)
+	_G.Yoru = a
+end)
+Farm:Line()
+
+Farm:Toggle("Auto Megumin",_G.AutoMegumin,function(value)
+    _G.AutoMegumin = value
+end)
+spawn(function()
+    while wait() do
+        if _G.AutoMegumin then
+            pcall(function()
+                --CheckLevel()
+                    for i,v in pairs(game:GetService("Workspace").Mob:GetChildren()) do
+                        if string.find(_G.Megumin, v.Name)  then
+                                repeat wait()
+                                    Tween(v.HumanoidRootPart.CFrame  * CFrame.new(-1,5,3))
+                                    v.HumanoidRootPart.CanCollide = false
+                                    v.Humanoid.WalkSpeed = 0
+                                    v.Head.CanCollide = false
+                                    v.HumanoidRootPart.Size = Vector3.new(30,30,30)
+                                    Click()
+                                    EquipWeapon(_G.Weapon2)
+                                until not _G.AutoMegumin or  v.Parent or not v.Humanoid.Health <= 0 
+                        end
+                    end
+            end)
+        end
+    end
+end)
+Megumin = {
+    "Samurai",
+    "Kaoma Man",
+    "Cat",
+}
+Farm:Dropdown("Select Mon Megumin","", Megumin,function(a)
+	_G.Megumin = a
+end)
+
+Farm:Seperator("Soon\nเร็วๆนี่")
+
+Shop:Line()
+Shop:Seperator("Shop")
+
+Shop:Button("Katana Wooden",function(value)
+    Tween(CFrame.new(105.98062133789062, 34.85085678100586, -846.3042602539062))
+end)
+Shop:Button("Yoru",function(value)
+    Tween(CFrame.new(106.91888427734375, 49.3508415222168, -947.2827758789062))
+end)
+Shop:Button("Katana",function(value)
+    Tween(CFrame.new(-66.42530059814453, 34.35083770751953, -975.6611328125))
+end)
+Shop:Button("David Martinez",function(value)
+    Tween(CFrame.new(-234.4379119873047, 43.431121826171875, 249.83531188964844))
+end)
+Shop:Button("MeguminST",function(value)
+      Tween(CFrame.new(-168.151443, 47.2450981, 205.938568, 0.487975538, -0, -0.872857332, 0, 1, -0, 0.872857332, 0, 0.487975538))
+end)
+Shop:Button("RyumaManGEO",function(value)
+      Tween(CFrame.new(-981.164795, 8.96271515, 1092.37488, -0.201244354, 0, -0.979541004, 0, 1, 0, 0.979541004, 0, -0.201244354))
+end)
+Shop:Button("ShanksManOP",function(value)
+      Tween(CFrame.new(252.3367, 9.58030319, -2017.09595, -1, 0, 0, 0, 1, 0, 0, 0, -1))
+end)
+Shop:Button("ThaiManGBF",function(value)
+      Tween(CFrame.new(1445.24744, 14.9747162, -1258.66406, 0, 0, 1, 0, 1, -0, -1, 0, 0))
+end)
+Shop:Button("WydoManGCO",function(value)
+      Tween(CFrame.new(-1230.50671, 46.4407883, -1276.83411, -0.622416258, 0, -0.782686412, 0, 1, 0, 0.782686412, 0, -0.622416258))
+end)
+Shop:Button("DarkKatanasManGG",function(value)
+      Tween(CFrame.new(-836.368408, 67.8227844, -74.6296997, -0.258864403, 0, -0.965913713, 0, 1, 0, 0.965913713, 0, -0.258864403))
+end)
